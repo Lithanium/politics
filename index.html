@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Australian Political Sentiments — Tracking Australian public opinion in real time using Twitter data, NLP analysis, and data visualisation. Follow @publicmetricsAU." />
+  <title>Australian Political Sentiments | @publicmetricsAU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo-link">
+        <span class="logo-text">Australian Political <span class="logo-accent">Sentiments</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Creator</a></li>
+      </ul>
+      <button class="nav-cta" id="nav-cta-btn"
+        onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
+        View Graphs →
+      </button>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Creator</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg-image"></div>
+    <div class="hero-overlay"></div>
+    <!-- Animated particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Sentiment tracking · Victorian State Election 2026 · @publicmetricsAU
+      </div>
+      <h1 class="hero-title">
+        Australian Political<br />
+        <span class="hero-accent">Sentiments</span>
+      </h1>
+      <p class="hero-subtitle">
+        Analysing Australian public opinion on political issues — powered by Twitter data, NLP, and data visualisation.
+        Follow along at <strong>@publicmetricsAU</strong>.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" id="hero-explore-btn"
+          onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
+          Browse Graphs →
+        </button>
+        <button class="btn-ghost" id="hero-learn-btn"
+          onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+          Learn More ↓
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-number" id="stat-tweets">7</span>
+          <span class="stat-label">Graphs Published</span>
+        </div>
+
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-number" id="stat-analysed">1400+</span>
+          <span class="stat-label">Tweets Analysed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-card">
+          <span class="stat-number" id="stat-days">Active</span>
+          <span class="stat-label">@publicmetricsAU</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Project</span>
+        <h2 class="section-title">What is Australian Political Sentiments?</h2>
+        <p class="section-subtitle">
+          A student-led data science project using the Twitter / X API to measure and visualise Australian public
+          sentiment on key political issues. Follow the graphs at <a href="https://x.com/publicmetricsAU"
+            target="_blank" rel="noopener" style="color:var(--gold)">@publicmetricsAU</a>.
+        </p>
+      </div>
+
+
+
+      <div class="methodology-banner">
+        <div class="methodology-text">
+          <h3>Methodology</h3>
+          <p>The data is collected through X API v2 and is in accordance with the platform guidelines.</p>
+          <p>Valence Aware Dictionary and sEntiment Reasoner (VADER) is used to estimate the sentiment on each post. The prebuilt Python library in natural language toolkit (nltk) is the variant used to approximate the sentiment.</p>
+          <p>There is a stronger weighing for posts that invoke a greater reaction from the environment suggesting that it is a "popular" opinion amongst Twitter users. The final weighing for each post is calculated by the sum of views multiplied by the probability of post engagement in the log scale. This attempts to reward posts with greater popularity without skewing the data through some outliers.</p>
+        </div>
+        <div class="methodology-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">NLP (VADER)</span>
+          <span class="tech-tag">Visualisation</span>
+          <span class="tech-tag">X API v2</span>
+          <span class="tech-tag">HTML</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY SECTION
+  ============================================================ -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Graphs</span>
+        <h2 class="section-title">Sentiment Graph Gallery</h2>
+        <p class="section-subtitle">Every graph published to <a href="https://x.com/publicmetricsAU" target="_blank"
+            rel="noopener" style="color:var(--gold)">@publicmetricsAU</a> — click any graph to view it full size.</p>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+
+        <div class="gallery-card" id="gallery-card-1"
+          onclick="openLightbox('Graphs/govt_budget.png', 'Sentiment Analysis: The Albanese Government Budget')">
+          <div class="gallery-img-wrap">
+            <img src="Graphs/govt_budget.png" alt="Albanese Government Budget sentiment analysis" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">🔍 View Full Size</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-tag">Economy · Budget</span>
+            <h3>Albanese Government Budget</h3>
+            <p>Weighted sentiment distribution on public reaction to the Albanese Government's latest federal budget.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-card" id="gallery-card-2"
+          onclick="openLightbox('Graphs/budget_reply.png', 'Sentiment Analysis: Angus Taylor Budget Reply Speech')">
+          <div class="gallery-img-wrap">
+            <img src="Graphs/budget_reply.png" alt="Angus Taylor budget reply speech sentiment analysis"
+              loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">🔍 View Full Size</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-tag">Economy · Opposition</span>
+            <h3>Angus Taylor's Budget Reply</h3>
+            <p>Public opinion on Angus Taylor's first budget reply speech as Opposition Leader.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" id="gallery-card-3"
+          onclick="openLightbox('Graphs/one_nation_party_graph.png', 'Sentiment Analysis: One Nation Party — SA Election')">
+          <div class="gallery-img-wrap">
+            <img src="Graphs/one_nation_party_graph.png" alt="One Nation Party SA election sentiment analysis"
+              loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">🔍 View Full Size</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-tag">Parties · SA Election</span>
+            <h3>One Nation — SA State Election</h3>
+            <p>Sentiment tracking One Nation Party's popularity during the South Australian state election.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" id="gallery-card-4"
+          onclick="openLightbox('Graphs/dezi_freeman.png', 'Sentiment Analysis: Dezi Freeman Manhunt')">
+          <div class="gallery-img-wrap">
+            <img src="Graphs/dezi_freeman.png" alt="Dezi Freeman Victoria Police manhunt sentiment analysis"
+              loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">🔍 View Full Size</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-tag">Law &amp; Order · Victoria</span>
+            <h3>Dezi Freeman Manhunt</h3>
+            <p>Public sentiment after Victoria's largest manhunt — fugitive Dezi Freeman located by Victoria Police.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" id="gallery-card-5"
+          onclick="openLightbox('Graphs/fuel_prices_graph.png', 'Sentiment Analysis: Fuel Prices After Iranian Conflict')">
+          <div class="gallery-img-wrap">
+            <img src="Graphs/fuel_prices_graph.png" alt="Fuel prices after Iranian conflict sentiment analysis"
+              loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">🔍 View Full Size</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-tag">Economy · Energy</span>
+            <h3>Fuel Prices &amp; the Iranian Conflict</h3>
+            <p>Australian opinion on fuel price rises following escalation of conflict in Iran.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" id="gallery-card-6"
+          onclick="openLightbox('Graphs/iran_football_graph.png', 'Sentiment Analysis: Iranian Football Players Granted Asylum')">
+          <div class="gallery-img-wrap">
+            <img src="Graphs/iran_football_graph.png"
+              alt="Iranian football players asylum in Australia sentiment analysis" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">🔍 View Full Size</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-tag">Immigration · Asylum</span>
+            <h3>Iranian Footballers Granted Asylum</h3>
+            <p>Sentiment on Iranian football players being granted asylum in Australia.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" id="gallery-card-7"
+          onclick="openLightbox('Graphs/strait_of_hormuz_graph.png', 'Sentiment Analysis: Naval Support to the Strait of Hormuz')">
+          <div class="gallery-img-wrap">
+            <img src="Graphs/strait_of_hormuz_graph.png"
+              alt="Australia naval support Strait of Hormuz sentiment analysis" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">🔍 View Full Size</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-tag">Defence · Foreign Policy</span>
+            <h3>Naval Support — Strait of Hormuz</h3>
+            <p>Public opinion on Australia potentially sending naval support to the Strait of Hormuz.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="gallery-twitter-cta">
+        <span>📣</span>
+        <p>New graphs are posted regularly to <a href="https://x.com/publicmetricsAU" target="_blank"
+            rel="noopener">@publicmetricsAU</a> — follow along for the latest analysis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" id="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+
+
+
+  <!-- ============================================================
+       ABOUT ME / CONTACT SECTION
+  ============================================================ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-bio" id="contact-bio">
+          <span class="section-tag">The Creator</span>
+          <h2 class="contact-name">About Me</h2>
+          <p class="contact-description">
+            I'm a high school student with a passion for data, technology, and Australian politics. Australian Political
+            Sentiments started as a personal project to understand how Australians engage with political issues on
+            social media.
+          </p>
+          <p class="contact-description">
+            I'm applying to volunteer with a local Victorian MP ahead of the 2026 state election, where I hope to
+            develop this sentiment analyser further and contribute meaningful data insights to a real political
+            campaign.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
