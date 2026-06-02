@@ -83,13 +83,13 @@
       </div>
       <div class="hero-stats">
         <div class="stat-card">
-          <span class="stat-number" id="stat-tweets">7</span>
+          <span class="stat-number" id="stat-tweets">8</span>
           <span class="stat-label">Graphs Published</span>
         </div>
 
         <div class="stat-divider"></div>
         <div class="stat-card">
-          <span class="stat-number" id="stat-analysed">1400+</span>
+          <span class="stat-number" id="stat-analysed">1700+</span>
           <span class="stat-label">Tweets Analysed</span>
         </div>
         <div class="stat-divider"></div>
@@ -155,7 +155,25 @@
 
       <div class="gallery-grid" id="gallery-grid">
 
-        <div class="gallery-card" id="gallery-card-1"
+        <div class="gallery-card"
+          onclick="openLightbox('Graphs/one_nation_poll.png', 'Sentiment Analysis: One Nation\'s Recent Polling')">
+          <div class="gallery-img-wrap">
+            <img src="Graphs/one_nation_poll.png" alt="One Nation's polling sentiment analysis" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">🔍 View Full Size</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-tag">Federal Election · Polling</span>
+            <h3>One Nation's Recent Polling</h3>
+            <p>Weighted sentiment distribution on public reaction to the Albanese Government's latest federal budget.
+            </p>
+            <a class="gallery-data-link" href="/Saved%20Data/one_nation_poll.json" download
+              onclick="event.stopPropagation()">Download Data (JSON)</a>
+          </div>
+        </div>
+
+        <div class="gallery-card"
           onclick="openLightbox('Graphs/govt_budget.png', 'Sentiment Analysis: The Albanese Government Budget')">
           <div class="gallery-img-wrap">
             <img src="Graphs/govt_budget.png" alt="Albanese Government Budget sentiment analysis" loading="lazy" />
@@ -168,10 +186,12 @@
             <h3>Albanese Government Budget</h3>
             <p>Weighted sentiment distribution on public reaction to the Albanese Government's latest federal budget.
             </p>
+            <a class="gallery-data-link" href="/Saved%20Data/govt_budget.json" download
+              onclick="event.stopPropagation()">Download Data (JSON)</a>
           </div>
         </div>
 
-        <div class="gallery-card" id="gallery-card-2"
+        <div class="gallery-card"
           onclick="openLightbox('Graphs/budget_reply.png', 'Sentiment Analysis: Angus Taylor Budget Reply Speech')">
           <div class="gallery-img-wrap">
             <img src="Graphs/budget_reply.png" alt="Angus Taylor budget reply speech sentiment analysis"
@@ -184,10 +204,12 @@
             <span class="gallery-tag">Economy · Opposition</span>
             <h3>Angus Taylor's Budget Reply</h3>
             <p>Public opinion on Angus Taylor's first budget reply speech as Opposition Leader.</p>
+            <a class="gallery-data-link" href="/Saved%20Data/budget_reply.json" download
+              onclick="event.stopPropagation()">Download Data (JSON)</a>
           </div>
         </div>
 
-        <div class="gallery-card" id="gallery-card-3"
+        <div class="gallery-card"
           onclick="openLightbox('Graphs/one_nation_party_graph.png', 'Sentiment Analysis: One Nation Party — SA Election')">
           <div class="gallery-img-wrap">
             <img src="Graphs/one_nation_party_graph.png" alt="One Nation Party SA election sentiment analysis"
@@ -200,10 +222,11 @@
             <span class="gallery-tag">Parties · SA Election</span>
             <h3>One Nation — SA State Election</h3>
             <p>Sentiment tracking One Nation Party's popularity during the South Australian state election.</p>
+            <span class="gallery-data-unavailable">Data Unavailable</span>
           </div>
         </div>
 
-        <div class="gallery-card" id="gallery-card-4"
+        <div class="gallery-card"
           onclick="openLightbox('Graphs/dezi_freeman.png', 'Sentiment Analysis: Dezi Freeman Manhunt')">
           <div class="gallery-img-wrap">
             <img src="Graphs/dezi_freeman.png" alt="Dezi Freeman Victoria Police manhunt sentiment analysis"
@@ -216,10 +239,12 @@
             <span class="gallery-tag">Law &amp; Order · Victoria</span>
             <h3>Dezi Freeman Manhunt</h3>
             <p>Public sentiment after Victoria's largest manhunt — fugitive Dezi Freeman located by Victoria Police.</p>
+            <a class="gallery-data-link" href="/Saved%20Data/dezi_freeman.json" download
+              onclick="event.stopPropagation()">Download Data (JSON)</a>
           </div>
         </div>
 
-        <div class="gallery-card" id="gallery-card-5"
+        <div class="gallery-card"
           onclick="openLightbox('Graphs/fuel_prices_graph.png', 'Sentiment Analysis: Fuel Prices After Iranian Conflict')">
           <div class="gallery-img-wrap">
             <img src="Graphs/fuel_prices_graph.png" alt="Fuel prices after Iranian conflict sentiment analysis"
@@ -232,10 +257,11 @@
             <span class="gallery-tag">Economy · Energy</span>
             <h3>Fuel Prices &amp; the Iranian Conflict</h3>
             <p>Australian opinion on fuel price rises following escalation of conflict in Iran.</p>
+            <span class="gallery-data-unavailable">Data Unavailable</span>
           </div>
         </div>
 
-        <div class="gallery-card" id="gallery-card-6"
+        <div class="gallery-card"
           onclick="openLightbox('Graphs/iran_football_graph.png', 'Sentiment Analysis: Iranian Football Players Granted Asylum')">
           <div class="gallery-img-wrap">
             <img src="Graphs/iran_football_graph.png"
@@ -248,10 +274,11 @@
             <span class="gallery-tag">Immigration · Asylum</span>
             <h3>Iranian Footballers Granted Asylum</h3>
             <p>Sentiment on Iranian football players being granted asylum in Australia.</p>
+            <span class="gallery-data-unavailable">Data Unavailable</span>
           </div>
         </div>
 
-        <div class="gallery-card" id="gallery-card-7"
+        <div class="gallery-card"
           onclick="openLightbox('Graphs/strait_of_hormuz_graph.png', 'Sentiment Analysis: Naval Support to the Strait of Hormuz')">
           <div class="gallery-img-wrap">
             <img src="Graphs/strait_of_hormuz_graph.png"
@@ -264,6 +291,7 @@
             <span class="gallery-tag">Defence · Foreign Policy</span>
             <h3>Naval Support — Strait of Hormuz</h3>
             <p>Public opinion on Australia potentially sending naval support to the Strait of Hormuz.</p>
+            <span class="gallery-data-unavailable">Data Unavailable</span>
           </div>
         </div>
 

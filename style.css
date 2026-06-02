@@ -320,6 +320,34 @@ canvas { display: block; width: 100% !important; }
 .gallery-card-body p {
   color: var(--text-secondary); font-size: 0.855rem; line-height: 1.6;
 }
+.gallery-data-link,
+.gallery-data-unavailable {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  padding: 0.32rem 0.78rem;
+  border: 1px solid;
+}
+.gallery-data-link {
+  color: var(--blue-light);
+  background: rgba(59,130,246,0.14);
+  border-color: rgba(59,130,246,0.28);
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+.gallery-data-link:hover {
+  color: #bfdbfe;
+  background: rgba(59,130,246,0.24);
+  border-color: rgba(59,130,246,0.42);
+}
+.gallery-data-unavailable {
+  color: var(--neutral);
+  background: rgba(148,163,184,0.12);
+  border-color: rgba(148,163,184,0.24);
+}
 .gallery-twitter-cta {
   display: flex; align-items: center; gap: 0.75rem;
   background: rgba(240,180,41,0.06); border: 1px solid rgba(240,180,41,0.2);
