@@ -83,13 +83,13 @@
       </div>
       <div class="hero-stats">
         <div class="stat-card">
-          <span class="stat-number" id="stat-tweets">8</span>
+          <span class="stat-number" id="stat-tweets">9</span>
           <span class="stat-label">Graphs Published</span>
         </div>
 
         <div class="stat-divider"></div>
         <div class="stat-card">
-          <span class="stat-number" id="stat-analysed">1700+</span>
+          <span class="stat-number" id="stat-analysed">1800+</span>
           <span class="stat-label">Tweets Analysed</span>
         </div>
         <div class="stat-divider"></div>
@@ -127,8 +127,13 @@
         <div class="methodology-text">
           <h3>Methodology</h3>
           <p>The data is collected through X API v2 and is in accordance with the platform guidelines.</p>
-          <p>Valence Aware Dictionary and sEntiment Reasoner (VADER) is used to estimate the sentiment on each post. The prebuilt Python library in natural language toolkit (nltk) is the variant used to approximate the sentiment.</p>
-          <p>There is a stronger weighing for posts that invoke a greater reaction from the environment suggesting that it is a "popular" opinion amongst Twitter users. The final weighing for each post is calculated by the sum of views multiplied by the probability of post engagement in the log scale. This attempts to reward posts with greater popularity without skewing the data through some outliers.</p>
+          <p>Valence Aware Dictionary and sEntiment Reasoner (VADER) is used to estimate the sentiment on each post. The
+            prebuilt Python library in natural language toolkit (nltk) is the variant used to approximate the sentiment.
+          </p>
+          <p>There is a stronger weighing for posts that invoke a greater reaction from the environment suggesting that
+            it is a "popular" opinion amongst Twitter users. The final weighing for each post is calculated by the sum
+            of views multiplied by the probability of post engagement in the log scale. This attempts to reward posts
+            with greater popularity without skewing the data through some outliers.</p>
         </div>
         <div class="methodology-tags">
           <span class="tech-tag">Python</span>
@@ -156,6 +161,25 @@
       <div class="gallery-grid" id="gallery-grid">
 
         <div class="gallery-card"
+          onclick="openLightbox('Graphs/sandilands.png', 'Sentiment Analysis: Sandilands\'s settlement wtih ARN media')">
+          <div class="gallery-img-wrap">
+            <img src="Graphs/sandilands.png" alt="Sentiment Analysis: Sandilands's settlement wtih ARN media"
+              loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">🔍 View Full Size</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-tag">Lawsuit · Media</span>
+            <h3>Sentiment Analysis: Sandiland\'s settlement wtih ARN media</h3>
+            <p>Public sentiment regarding Kyle Sandilands's settlement with ARN media.
+            </p>
+            <a class="gallery-data-link" href="/Saved%20Data/sandilands.json" download
+              onclick="event.stopPropagation()">Download Data (JSON)</a>
+          </div>
+        </div>
+
+        <div class="gallery-card"
           onclick="openLightbox('Graphs/one_nation_poll.png', 'Sentiment Analysis: One Nation\'s Recent Polling')">
           <div class="gallery-img-wrap">
             <img src="Graphs/one_nation_poll.png" alt="One Nation's polling sentiment analysis" loading="lazy" />
@@ -166,7 +190,7 @@
           <div class="gallery-card-body">
             <span class="gallery-tag">Federal Election · Polling</span>
             <h3>One Nation's Recent Polling</h3>
-            <p>Weighted sentiment distribution on public reaction to the Albanese Government's latest federal budget.
+            <p>Public sentiment following One Nation's historically high polling.
             </p>
             <a class="gallery-data-link" href="/Saved%20Data/one_nation_poll.json" download
               onclick="event.stopPropagation()">Download Data (JSON)</a>
