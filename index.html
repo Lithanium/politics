@@ -83,13 +83,13 @@
       </div>
       <div class="hero-stats">
         <div class="stat-card">
-          <span class="stat-number" id="stat-tweets">9</span>
+          <span class="stat-number" id="stat-tweets">10</span>
           <span class="stat-label">Graphs Published</span>
         </div>
 
         <div class="stat-divider"></div>
         <div class="stat-card">
-          <span class="stat-number" id="stat-analysed">1800+</span>
+          <span class="stat-number" id="stat-analysed">2000+</span>
           <span class="stat-label">Tweets Analysed</span>
         </div>
         <div class="stat-divider"></div>
@@ -159,6 +159,24 @@
       </div>
 
       <div class="gallery-grid" id="gallery-grid">
+
+        <div class="gallery-card"
+          onclick="openLightbox('Graphs/sandilands.png', 'Sentiment Analysis: Monoculturism in Australia')">
+          <div class="gallery-img-wrap">
+            <img src="Graphs/monoculturism.png" alt="Sentiment Analysis: Monoculturism in Australia" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom">🔍 View Full Size</span>
+            </div>
+          </div>
+          <div class="gallery-card-body">
+            <span class="gallery-tag">Society · Opinion</span>
+            <h3>Sentiment Analysis: Monoculturism in Australia</h3>
+            <p>Public sentiment regarding monoculturism in Australia.
+            </p>
+            <a class="gallery-data-link" href="/Saved%20Data/monoculturism.json" download
+              onclick="event.stopPropagation()">Download Data (JSON)</a>
+          </div>
+        </div>
 
         <div class="gallery-card"
           onclick="openLightbox('Graphs/sandilands.png', 'Sentiment Analysis: Sandilands\'s settlement wtih ARN media')">
